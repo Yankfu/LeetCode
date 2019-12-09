@@ -3,7 +3,7 @@ package com.LeetCode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class _0728_×Ô³ýÊý {
+public class _0728_è‡ªé™¤æ•° {
 	
 	public static void main(String[] args)
 	{

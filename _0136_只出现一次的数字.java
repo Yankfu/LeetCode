@@ -1,6 +1,6 @@
 package com.LeetCode;
 
-public class _0136_只出现一次的数字 {
+public class _0136_鍙嚭鐜颁竴娆＄殑鏁板瓧 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

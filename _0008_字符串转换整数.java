@@ -1,6 +1,6 @@
 package com.LeetCode;
 
-public class _0008_×Ö·û´®×ª»»ÕûÊı {
+public class _0008_å­—ç¬¦ä¸²è½¬æ¢æ•´æ•° {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -9,9 +9,9 @@ public class _0008_×Ö·û´®×ª»»ÕûÊı {
 
 	public static int myAtoi(String str) {
         char[] ch = str.toCharArray();
-        int flag=0;//·ûºÅÎ»
-        int flagg=0;//±£Ö¤Ö»ÓĞÒ»¸ö·ûºÅ
-        int flaggg=0;//¿Õ¸ñÎ»
+        int flag=0;//ï¿½ï¿½ï¿½ï¿½Î»
+        int flagg=0;//ï¿½ï¿½Ö¤Ö»ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        int flaggg=0;//ï¿½Õ¸ï¿½Î»
         int reasult=0;
         for(int i=0;i<ch.length;i++)
         {
@@ -50,7 +50,7 @@ public class _0008_×Ö·û´®×ª»»ÕûÊı {
                 		reasult=reasult*10;
                 	}
         			
-        			//ÒòÎª·ûºÅÎ»µ¥¶À¼ÆËã£¬ËùÒÔ²»ÓÃ´¦ÀíÏÂÒçÇé¿ö
+        			//ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ã£¬ï¿½ï¿½ï¿½Ô²ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             		if(reasult>Integer.MAX_VALUE-(ch[i]-'0')){
             			if(flag==1)
             			{

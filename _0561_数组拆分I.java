@@ -2,7 +2,7 @@ package com.LeetCode;
 
 import java.util.Arrays;
 
-public class _0561_Êý×é²ð·ÖI {
+public class _0561_æ•°ç»„æ‹†åˆ†I {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

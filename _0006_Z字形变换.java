@@ -1,21 +1,17 @@
 package com.LeetCode;
 
-import java.util.ArrayList;
-
-public class _0006_Z◊÷–Œ±‰ªª {
+public class _0006_ZÂ≠óÂΩ¢ÂèòÊç¢ {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		String s = "LCIRETOESIIGEDHN";
-		String s1= "L I E O S I E H";
-		String s2= " C R T E I G D N";
 		int numRows = 2;
 		System.out.println(convert(s, numRows));
 	}
 /*
- * L(0)(6*0+0)     				D(0)(6*1+0)     			R(0)(6*2+0)		j=0;j<duan;j++  ƒ⁄≤„—≠ª∑
- * E(1)(6*0+1)   O(5)(6*0+5)  	E(1)(6*1+1)   I(5)(6*1+5) 	I(1)(6*2+1)		i=0  while(i<duanchang)  Õ‚≤„—≠ª∑
+ * L(0)(6*0+0)     				D(0)(6*1+0)     			R(0)(6*2+0)		j=0;j<duan;j++  ÔøΩ⁄≤ÔøΩ—≠ÔøΩÔøΩ
+ * E(1)(6*0+1)   O(5)(6*0+5)  	E(1)(6*1+1)   I(5)(6*1+5) 	I(1)(6*2+1)		i=0  while(i<duanchang)  ÔøΩÔøΩÔøΩ—≠ÔøΩÔøΩ
  * E(2)(6*0+2) C(4)(6*0+4)    	I(2)(6*1+2) H(4)(6*1+4)   	N(2)(6*2+2)		(duanchang*j+i)
  * T(3)(6*0+3)     				S(3)(6*1+3)     			G(3)(6*2+3)
  */
@@ -28,7 +24,7 @@ public class _0006_Z◊÷–Œ±‰ªª {
 		}
 		StringBuilder sb = new StringBuilder();
 		//System.out.println(s.length());
-		//º«µ√øº¬«Ãÿ ‚«Èøˆ
+		//ÔøΩ«µ√øÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ
 		int duan = (s.length())/(numRows+numRows-2);
 		int duanchang = numRows+numRows-2;
 		
@@ -40,10 +36,8 @@ public class _0006_Z◊÷–Œ±‰ªª {
 			duan++;
 		}
 		
-		int k=0;
-		
 		int i=0;
-		while(i<duanchang/2+1) { //øÿ÷∆“™º”µƒŒª÷√ µ⁄º∏∂Œ∂Œ*∂Œ≥§+Œª÷√
+		while(i<duanchang/2+1) { //ÔøΩÔøΩÔøΩÔøΩ“™ÔøΩ”µÔøΩŒªÔøΩÔøΩ ÔøΩ⁄ºÔøΩÔøΩŒ∂ÔøΩ*ÔøΩŒ≥ÔøΩ+ŒªÔøΩÔøΩ
 			for(int j=0;j<duan;j++){
 				if(duanchang*j+i < s.length()) {
 					if( (duanchang - i != i) && (i != 0) ) {

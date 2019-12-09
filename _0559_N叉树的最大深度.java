@@ -3,7 +3,7 @@ package com.LeetCode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class _0559_N叉树的最大深度 {
+public class _0559_N鍙夋爲鐨勬渶澶ф繁搴
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

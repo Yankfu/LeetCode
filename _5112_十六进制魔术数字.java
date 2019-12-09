@@ -3,7 +3,7 @@ package com.LeetCode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class _5112_十六进制魔术数字 {
+public class _5112_鍗佸叚杩涘埗榄旀湳鏁板瓧 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

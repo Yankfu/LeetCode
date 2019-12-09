@@ -2,7 +2,7 @@ package com.LeetCode;
 
 import java.util.Stack;
 
-public class _0682_°ôÇò±ÈÈü {
+public class _0682_æ£’çƒæ¯”èµ›{
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -40,7 +40,7 @@ public class _0682_°ôÇò±ÈÈü {
 //				result=result-pre;
 //				pre=predepre;
 //				predepre=predepredepre;
-//			}//Èç¹ûÁ¬ĞøÈ¡ÏûÉÏÒ»ÂÖµÃ·ÖµÄÇé¿öÏÂ¾Í»á²úÉúÖØĞÂ¼ÆÊıµÄ¿ÉÄÜ£¬ËùÒÔ²»ÄÜÕâÑù¡£
+//			}//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ÖµÃ·Öµï¿½ï¿½ï¿½ï¿½ï¿½Â¾Í»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Ü£ï¿½ï¿½ï¿½ï¿½Ô²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //			else
 //			{
 //				int fen=Integer.parseInt( op );
@@ -76,10 +76,10 @@ public class _0682_°ôÇò±ÈÈü {
 			{
 				result-=st.peek();
 				st.pop();
-			}//Èç¹ûÁ¬ĞøÈ¡ÏûÉÏÒ»ÂÖµÃ·ÖµÄÇé¿öÏÂ¾Í»á²úÉúÖØĞÂ¼ÆÊıµÄ¿ÉÄÜ£¬ËùÒÔ²»ÄÜÕâÑù¡£
+			}//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ÖµÃ·Öµï¿½ï¿½ï¿½ï¿½ï¿½Â¾Í»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Ü£ï¿½ï¿½ï¿½ï¿½Ô²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			else
 			{
-				int fen=Integer.parseInt( op );//×Ö·û´®×ªÊı×Ö
+				int fen=Integer.parseInt( op );//ï¿½Ö·ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½
 				st.push(fen);
 				result+=st.peek();
 			}

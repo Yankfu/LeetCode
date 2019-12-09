@@ -1,6 +1,6 @@
 package com.LeetCode;
 
-public class _0002_两数相加 {
+public class _0002_涓ゆ暟鐩稿姞 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub	
@@ -24,10 +24,10 @@ public class _0002_两数相加 {
 		}
 	}
 
-	//读取进位位，执行一次加，确定进位位，然后让sum-10确定head的值，
-	//让head.next=new ListNode(0);
-	//让head=head.next;
-	//重复之前的操作。
+	//锟斤拷取锟斤拷位位锟斤拷执锟斤拷一锟轿加ｏ拷确锟斤拷锟斤拷位位锟斤拷然锟斤拷锟斤拷sum-10确锟斤拷head锟斤拷值锟斤拷
+	//锟斤拷head.next=new ListNode(0);
+	//锟斤拷head=head.next;
+	//锟截革拷之前锟侥诧拷锟斤拷锟斤拷
 	public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 		int carryIn=0;
 		ListNode head = new ListNode(0);

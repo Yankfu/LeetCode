@@ -1,6 +1,6 @@
 package com.LeetCode;
 
-public class _1079_»î×ÖÓ¡Ë¢ {
+public class _1079_æ´»å­—å°åˆ· {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

@@ -3,7 +3,7 @@ package com.LeetCode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class _0905_°´ÆæÅ¼ÅÅĞòÊı×é {
+public class _0905_æŒ‰å¥‡å¶æ’åºæ•°ç»„ {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

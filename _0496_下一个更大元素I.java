@@ -2,7 +2,7 @@ package com.LeetCode;
 
 import java.util.Stack;
 
-public class _0496_下一个更大元素I {
+public class _0496_涓嬩竴涓洿澶у厓绱營{
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -23,7 +23,7 @@ public class _0496_下一个更大元素I {
 		{
 			s.push(i);
 		}
-		//第一遍循环记录下标
+		//锟斤拷一锟斤拷循锟斤拷锟斤拷录锟铰憋拷
 		for(int i:nums1)
 		{
 			for(int j=0;j<nums2.length;j++)

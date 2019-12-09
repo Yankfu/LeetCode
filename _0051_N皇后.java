@@ -3,7 +3,7 @@ package com.LeetCode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class _0051_N»Êºó {
+public class _0051_Nçš‡å{
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -18,10 +18,10 @@ public class _0051_N»Êºó {
 
 	/*
 	 * 
-	 * Ä¬ÈÏËùÓĞÎ»ÖÃ¶¼ÊÇ¡®.¡¯
-	 * ´ÓµÚÒ»¸öÎ»ÖÃ¿ªÊ¼·Å»Êºó
-	 * Èç¹ûºÏ·¨½øĞĞÏÂÒ»¸öÎ»ÖÃµÄ¼ì²â
-	 * Èç¹û²»ºÏ·¨backtrack
+	 * Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ã¶ï¿½ï¿½Ç¡ï¿½.ï¿½ï¿½
+	 * ï¿½Óµï¿½Ò»ï¿½ï¿½Î»ï¿½Ã¿ï¿½Ê¼ï¿½Å»Êºï¿½
+	 * ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Î»ï¿½ÃµÄ¼ï¿½ï¿½
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½backtrack
 	 * 
 	 */
 	public static int solveNQueens(int n) {
@@ -45,7 +45,7 @@ public class _0051_N»Êºó {
 		if(i == qipan.length)
 		{
 			reasult.add(builder(qipan));
-			//ÕâÀïÊä³öÒ»¸öºÏ·¨µÄÇé¿ö£¬µ«ÊÇÏÖÔÚ»¹²»Ì«»áĞ´£¬µÈÏÂÔÙĞ´
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú»ï¿½ï¿½ï¿½Ì«ï¿½ï¿½Ğ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ´
 		}
 		
 		for(int j=0;j<qipan.length;j++)
@@ -59,14 +59,14 @@ public class _0051_N»Êºó {
 		}
 	}
 	
-	//ÑéÖ¤ÊÇ·ñºÏ·¨
+	//ï¿½ï¿½Ö¤ï¿½Ç·ï¿½Ï·ï¿½
 	private static boolean validate(char[][] broad, int i, int colIndex) {
 	    for (int x = 0; x < broad.length; x++) {
 	        for (int y = 0; y < colIndex; y++) {
 	            /**
-	                * x ==i ÊÇË®Æ½·½Ïò
-	                * x + colIndex = i +y  ÊÇĞ±×óÉÏ½Ç
-	                * x + y = colIndex + i ÊÇĞ±×óÏÂ½Ç
+	                * x ==i ï¿½ï¿½Ë®Æ½ï¿½ï¿½ï¿½ï¿½
+	                * x + colIndex = i +y  ï¿½ï¿½Ğ±ï¿½ï¿½ï¿½Ï½ï¿½
+	                * x + y = colIndex + i ï¿½ï¿½Ğ±ï¿½ï¿½ï¿½Â½ï¿½
 	                */
 	            if (broad[x][y] == 'Q' && (x == i || x + colIndex == i + y || x + y == i + colIndex)) {
 	                return false;
@@ -76,7 +76,7 @@ public class _0051_N»Êºó {
 	    return true;
 	}
 
-	//Õâ¸ö¾ÍÊÇËùÓĞ¶¼ºÏ·¨ÁË£¬ÒªÌí¼ÓÒ»¸öÇé¿ö
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½Ï·ï¿½ï¿½Ë£ï¿½Òªï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½
 	public static List<String> builder(char[][] qipan) {
 		List<String> li = new ArrayList<String>();
 		for(int i=0;i<qipan.length;i++)

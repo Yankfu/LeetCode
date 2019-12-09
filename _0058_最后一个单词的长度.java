@@ -1,6 +1,6 @@
 package com.LeetCode;
 
-public class _0058_最后一个单词的长度 {
+public class _0058_鏈�鍚庝竴涓崟璇嶇殑闀垮害 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println(lengthOfLastWord("Hello world  "));

@@ -1,6 +1,6 @@
 package com.LeetCode;
 
-public class _0344_·´×ª×Ö·û´® {
+public class _0344_åè½¬å­—ç¬¦ä¸² {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -9,7 +9,7 @@ public class _0344_·´×ª×Ö·û´® {
 		reverseString(s);
 	}
 	/*
-	 * Ë«Ö¸Õë·½·¨£¬Ò»¸ö´ÓÇ°¸øºó£¬Ò»¸ö´Óºó¸øÇ°£¬µ±Ö¸ÕëÏàÓö»òÕßĞ¡µÄ´óÓÚ´óµÄµÄÊ±ºò½áÊøÑ­»·¡£
+	 * Ë«Ö¸ï¿½ë·½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Óºï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¡ï¿½Ä´ï¿½ï¿½Ú´ï¿½Äµï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½ï¿½
 	 */
 	public static void reverseString(char[] s) {
         char temp;

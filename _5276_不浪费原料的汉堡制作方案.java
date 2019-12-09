@@ -3,7 +3,7 @@ package com.LeetCode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class _5276_不浪费原料的汉堡制作方案 {
+public class _5276_涓嶆氮璐瑰師鏂欑殑姹夊牎鍒朵綔鏂规 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

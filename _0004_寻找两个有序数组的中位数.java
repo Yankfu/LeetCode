@@ -1,6 +1,6 @@
 package com.LeetCode;
 
-public class _0004_寻找两个有序数组的中位数 {
+public class _0004_瀵绘壘涓や釜鏈夊簭鏁扮粍鐨勪腑浣嶆暟 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

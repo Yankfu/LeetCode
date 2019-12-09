@@ -1,6 +1,6 @@
 package com.LeetCode;
 
-public class _0821_×Ö·ûµÄ×î¶Ì¾àÀë {
+public class _0821_å­—ç¬¦çš„æœ€çŸ­è·ç¦» {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -30,7 +30,7 @@ public class _0821_×Ö·ûµÄ×î¶Ì¾àÀë {
 		{
 			if(nes[i]==C)
 			{
-				temp[i]=0;//¸øtempÊý×é¸³Öµ
+				temp[i]=0;//ï¿½ï¿½tempï¿½ï¿½ï¿½é¸³Öµ
 				int j=i;
 				while(j>0)
 				{

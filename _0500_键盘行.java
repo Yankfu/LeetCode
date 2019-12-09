@@ -2,7 +2,7 @@ package com.LeetCode;
 
 import java.util.*;
 
-public class _0500_¼üÅÌÐÐ {
+public class _0500_é”®ç›˜è¡Œ {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

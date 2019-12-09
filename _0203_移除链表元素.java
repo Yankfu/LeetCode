@@ -28,6 +28,5 @@ public class _0203_移除链表元素 {
 			iter = iter.next;
 		}
 		return header.next;
-		return null;
     }
 }

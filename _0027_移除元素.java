@@ -3,7 +3,7 @@ package com.LeetCode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class _0027_ÒÆ³ýÔªËØ {
+public class _0027_ç§»é™¤å…ƒç´  {
 	public static int[] nums = {2,3,3,2};
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

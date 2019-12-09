@@ -1,6 +1,6 @@
 package com.LeetCode;
 
-public class _1128_等价多米诺骨牌对数量 {
+public class _1128_绛変环澶氱背璇洪鐗屽鏁伴噺{
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -39,7 +39,7 @@ public class _1128_等价多米诺骨牌对数量 {
 		{
 			for(int j=i+1;j<dominoes.length;j++)
 			{
-                if(dominoes[i][0]+1<dominoes[j][0])//先排序
+                if(dominoes[i][0]+1<dominoes[j][0])//锟斤拷锟斤拷锟斤拷
                 {
                     break;
                 }

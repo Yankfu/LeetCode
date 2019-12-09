@@ -2,7 +2,7 @@ package com.LeetCode;
 
 import java.util.Arrays;
 
-public class _0557_反转字符串中的单词III {
+public class _0557_鍙嶈浆瀛楃涓蹭腑鐨勫崟璇岻II{
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -11,9 +11,9 @@ public class _0557_反转字符串中的单词III {
 	}
 
 	/*
-	 * 双指针
-	 * 四个变量
-	 * 一个指最开始的，一个指空格前的，
+	 * 双指锟斤拷
+	 * 锟侥革拷锟斤拷锟斤拷
+	 * 一锟斤拷指锟筋开始锟侥ｏ拷一锟斤拷指锟秸革拷前锟侥ｏ拷
 	 */
 	public static String reverseWords(String s) {
         char[] ch=s.toCharArray();

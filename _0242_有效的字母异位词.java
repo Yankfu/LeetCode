@@ -2,7 +2,7 @@ package com.LeetCode;
 
 import java.util.Arrays;
 
-public class _0242_有效的字母异位词 {
+public class _0242_鏈夋晥鐨勫瓧姣嶅紓浣嶈瘝 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

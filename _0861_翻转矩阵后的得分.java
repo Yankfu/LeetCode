@@ -1,6 +1,6 @@
 package com.LeetCode;
 
-public class _0861_·­×ª¾ØÕóºóµÄµÃ·Ö {
+public class _0861_ç¿»è½¬çŸ©é˜µåçš„å¾—åˆ† {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -9,8 +9,8 @@ public class _0861_·­×ª¾ØÕóºóµÄµÃ·Ö {
 		System.out.println(matrixScore(A));
 	}
 
-	//ÏÈ°ÑËùÓĞĞĞµÄµÚÒ»¸ö±ä³É1
-	//È»ºó°´ÕÕ0³öÏÖµÄÎ»ÖÃ½øĞĞÅÅĞò
+	//ï¿½È°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ĞµÄµï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½1
+	//È»ï¿½ï¿½ï¿½ï¿½0ï¿½ï¿½ï¿½Öµï¿½Î»ï¿½Ã½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public static int matrixScore(int[][] A) {
 		int result=0;
 		for(int i=0;i<A.length;i++)

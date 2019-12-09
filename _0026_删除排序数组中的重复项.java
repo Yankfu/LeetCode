@@ -3,7 +3,7 @@ package com.LeetCode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class _0026_删除排序数组中的重复项 {
+public class _0026_鍒犻櫎鎺掑簭鏁扮粍涓殑閲嶅椤箋
 
 	private static int[] a= {0,0,1,1,1,2,2,3,3,4};
 	public static void main(String[] args) {
