@@ -1,6 +1,6 @@
 package com.LeetCode;
 
-public class _852_山脉数组的峰顶索引 {
+public class _0852_山脉数组的峰顶索引 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
