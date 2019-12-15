@@ -16,7 +16,6 @@ public class _0005_最长回文子串 {
         if(sLength == 1){
             return s;
         }
-        String s_new = new String();
         int j=0;
         char[] ch = new char[(s.length()*2+1)];
         //System.out.println((s.length()*2+1));
