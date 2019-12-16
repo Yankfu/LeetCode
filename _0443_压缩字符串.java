@@ -6,11 +6,11 @@ public class _0443_压缩字符串 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		char[] chars = {'a','a','b','b','c','c','c'};
-		int temp=compress(chars);
+		char[] chars = {'a','a','a','a','b','a'};
+		int temp = compress(chars);
 		System.out.println(temp);
-		for(int i=0;i<temp;i++) {
-			System.out.print(chars[i]+" ");
+		for (int i = 0; i < temp; i++) {
+			System.out.print(chars[i] + " ");
 		}
 	}
 
@@ -22,34 +22,36 @@ public class _0443_压缩字符串 {
 		int reasult = 0;
 		int Fuck = 1;
 		int i = 0;
-		ArrayList<Character> li = new ArrayList<Character>();
 		while (i < chars.length && Fuck < chars.length) {
 			if (chars[i] == chars[Fuck]) {
 				Fuck++;
 				continue;
 			} else if (chars[i] != chars[Fuck]) {
-				//System.out.println("i: "+i+" Fuck: "+Fuck);
+				// System.out.println("i: "+i+" Fuck: "+Fuck);
 				int temp = Fuck - i;
 				if (temp == 1) {
-					li.add(chars[i]);
+					chars[reasult] = chars[i];
 					reasult++;
 				} else if (temp < 10 && temp > 1) {
-					reasult += 2;
-					li.add(chars[i]);
-					for(char a:Integer.toString(temp).toCharArray()) {
-						li.add(a);
+					chars[reasult] = chars[i];
+					reasult++;
+					for (char a : Integer.toString(temp).toCharArray()) {
+						chars[reasult] = a;
+						reasult++;
 					}
 				} else if (temp < 100 && temp > 9) {
-					reasult += 3;
-					li.add(chars[i]);
-					for(char a:Integer.toString(temp).toCharArray()) {
-						li.add(a);
+					chars[reasult] = chars[i];
+					reasult++;
+					for (char a : Integer.toString(temp).toCharArray()) {
+						chars[reasult] = a;
+						reasult++;
 					}
 				} else {
-					reasult += 4;
-					li.add(chars[i]);
-					for(char a:Integer.toString(temp).toCharArray()) {
-						li.add(a);
+					chars[reasult] = chars[i];
+					reasult++;
+					for (char a : Integer.toString(temp).toCharArray()) {
+						chars[reasult] = a;
+						reasult++;
 					}
 				}
 				i = Fuck;
@@ -57,39 +59,37 @@ public class _0443_压缩字符串 {
 			}
 		}
 		if (i == chars.length - 1) {
+			chars[reasult] = chars[i];
+			//System.out.println(chars[i]);
 			reasult++;
-			li.add(chars[i]);
-			System.out.println("???      1 ");
+			// System.out.println("??? 1 ");
 		} else if (i < chars.length - 1) {
 			int temp = Fuck - i;
 			if (temp == 1) {
-				li.add(chars[i]);
-				System.out.println("???      2 ");
+				// System.out.println("??? 2 ");
 				reasult++;
 			} else if (temp < 10 && temp > 1) {
-				reasult += 2;
-				li.add(chars[i]);
-				for(char a:Integer.toString(temp).toCharArray()) {
-					li.add(a);
+				chars[reasult] = chars[i];
+				reasult++;
+				for (char a : Integer.toString(temp).toCharArray()) {
+					chars[reasult] = a;
+					reasult++;
 				}
 			} else if (temp < 100 && temp > 9) {
-				reasult += 3;
-				li.add(chars[i]);
-				for(char a:Integer.toString(temp).toCharArray()) {
-					li.add(a);
+				chars[reasult] = chars[i];
+				reasult++;
+				for (char a : Integer.toString(temp).toCharArray()) {
+					chars[reasult] = a;
+					reasult++;
 				}
 			} else {
-				reasult += 4;
-				li.add(chars[i]);
-				for(char a:Integer.toString(temp).toCharArray()) {
-					li.add(a);
+				chars[reasult] = chars[i];
+				reasult++;
+				for (char a : Integer.toString(temp).toCharArray()) {
+					chars[reasult] = a;
+					reasult++;
 				}
 			}
-		}
-		i=0;
-		while(i<li.size()){
-			chars[i]=li.get(i);
-			i++;
 		}
 		return reasult;
 	}
