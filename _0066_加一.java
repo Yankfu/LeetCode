@@ -1,20 +1,21 @@
 package com.LeetCode;
 
-public class _test {
+public class _0066_加一 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// System.out.println(intToRoman(1994));
-		int[] digits= {4,3,2,1};
+		int[] digits= {4,9,9,9,9};
 		int[] temp=plusOne(digits);
 		for(int a:temp) {
 			System.out.print(a+" ");
 		}
 	}
+	
 	public static int[] plusOne(int[] digits) {
         int len=digits.length;
         int jinwei=0;
         for(int i=len-1;i>=0;i--) {
+        	System.out.println(digits[i]+"  "+jinwei);
         	if(i==len-1) {
             	if(digits[i]==9) {
             		jinwei=1;
@@ -27,14 +28,17 @@ public class _test {
         		if(jinwei==0) {
         			break;
         		}
-        		else if(digits[i]==9 && jinwei==1) 
+        		else if(jinwei==1) 
         		{
-        			jinwei=1;
-            		digits[i]=0;
-        		}else if(digits[i]!=9 && jinwei==1) {
-        			digits[1]++;
-        			break;
-            	}
+        			if(digits[i]==9) {
+        				digits[i]=0;
+        				jinwei=1;
+        			}else if(digits[i]!=9) {
+        				digits[i]++;
+            			jinwei=0;
+            			break;
+        			}
+        		}
         	}
         }
         if(jinwei==1) {
