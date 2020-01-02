@@ -7,7 +7,10 @@ public class _0118_杨辉三角 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		List<List<Integer>> li = generate(5);
+		List<List<Integer>> li = generate(33);
+		for(List list:li) {
+			System.out.println(list);
+		}
 	}
 	public static List<List<Integer>> generate(int numRows) {
         int[][] row = new int[numRows][];
