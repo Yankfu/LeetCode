@@ -15,33 +15,76 @@ public class _0054_螺旋矩阵 {
 	}
 	public static List<Integer> spiralOrder(int[][] matrix) {
 		if(matrix.length==0) {
-			return null;
+			List res = new ArrayList();
+			return res;
+		}
+		if(matrix.length==1) {
+			List res = new ArrayList();
+			for(int a:matrix[0]) {
+				res.add(a);
+			}
+			return res;
 		}
 		int i=0;
 		int j=0;
 		List li = new ArrayList();
 		while(true) {
-			if(matrix[0].length==1 || matrix[i+1][j]==0) {
+			if((j>=matrix[0].length || i>=matrix.length || j<0 || i<0) || matrix[i][j]==Integer.MIN_VALUE) {
 				break;
 			}
-			while(i<matrix[0].length && matrix[i+1][j]!=0) { //top
-				li.add(matrix[i][j]);
-				matrix[i][j]=0;
-				i++;
-				continue;
+			while(true) {
+				if(j==matrix[0].length || matrix[i][j]==Integer.MIN_VALUE ) {
+					break;
+				}else {
+					//System.out.println(i+"  "+j);
+					li.add(matrix[i][j]);
+					matrix[i][j]=Integer.MIN_VALUE;
+					j++;
+				}
 			}
+			j--;
+			i++;
+//			System.out.println(i+"  "+j);
+			while(true) {
+				if(i==matrix.length || matrix[i][j]==Integer.MIN_VALUE ) {
+					break;
+				}else {
+					li.add(matrix[i][j]);
+					matrix[i][j]=Integer.MIN_VALUE;
+					i++;
+				}
+			}
+			i--;
+			j--;
+			while(true) {
+				if(j==-1 || matrix[i][j]==Integer.MIN_VALUE ) {
+					break;
+				}else {
+					li.add(matrix[i][j]);
+					matrix[i][j]=Integer.MIN_VALUE;
+					j--;
+				}
+			}
+			i--;
 			j++;
-			while(j<matrix.length && matrix[i][j+1]!=0) {//right
-				
+			while(true) {
+				if(i==0 || matrix[i][j]==Integer.MIN_VALUE ) {
+					break;
+				}else {
+					li.add(matrix[i][j]);
+					matrix[i][j]=Integer.MIN_VALUE;
+					i--;
+				}
 			}
-			while(j<matrix.length && matrix[i][j+1]!=0) {//button
-				
-			}
-			while(j<matrix.length && matrix[i][j+1]!=0) {//left
-	
-			}
-			break;
+			i++;
+			j++;
 		}
-		return null;
+//		for(i=0;i<matrix.length;i++) {
+//			for(j=0;j<matrix.length;j++) {
+//				System.out.print(matrix[i][j]+" ");
+//			}
+//			System.out.println();
+//		}
+		return li;
     }
 }
