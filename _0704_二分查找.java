@@ -4,7 +4,7 @@ public class _0704_二分查找 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] nums = {-1};
+		int[] nums = {};
 		int target = -1;
 		System.out.println(search(nums,target));
 	}
