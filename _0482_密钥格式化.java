@@ -44,7 +44,7 @@ public class _0482_密钥格式化 {
 			if(ch[i] == '-') {
 				continue;
 			}else if(ch[i] != '-') {	
-				System.out.println(ch[i]+"   "+count);
+				//System.out.println(ch[i]+"   "+count);
         		if(count == K) {
         			sb.append('-');
         			count = 0;
