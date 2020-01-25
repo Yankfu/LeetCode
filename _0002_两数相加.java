@@ -64,15 +64,6 @@ public class _0002_两数相加 {
 		
 		return trueHead;
 	}
-
-	private static class ListNode {
-		int val;
-		ListNode next;
-
-		ListNode(int x) {
-			val = x;
-		}
-	}
 }
 
 /**

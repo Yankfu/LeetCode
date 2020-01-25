@@ -27,7 +27,7 @@ public class _1160_拼写单词 {
         			nums[a-'a']--;
         		}
         	}
-        	System.out.println(words[i]+"  "+res);
+        	//System.out.println(words[i]+"  "+res);
         	if(flag) {
         		res = res + ch.length;
         	}
