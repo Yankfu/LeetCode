@@ -4,8 +4,8 @@ public class _0043_字符串相乘 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String a = "9";
-		String b = "99";
+		String a = "123";
+		String b = "456";
 		System.out.println(multiply(a,b));
 	}
 	public static String multiply(String num1, String num2) {
