@@ -1,6 +1,6 @@
 package com.LeetCode;
 
-public class _387_字符串中的第一个唯一字符 {
+public class _0387_字符串中的第一个唯一字符 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

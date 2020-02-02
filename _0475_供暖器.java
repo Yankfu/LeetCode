@@ -1,6 +1,6 @@
 package com.LeetCode;
 
-public class _475_供暖器 {
+public class _0475_供暖器 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
