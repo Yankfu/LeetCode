@@ -14,7 +14,8 @@ public class _0056_合并区间 {
 		}
 	}
 	public static int[][] merge(int[][] intervals) {
-		return intervals;
+		int[][] res = intervals.clone();
+		return res;
     }
 //	public static int[][] merge(int[][] intervals) {
 //		if(intervals.length==0) {
