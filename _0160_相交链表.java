@@ -5,7 +5,9 @@ import java.util.Set;
 
 public class _0160_相交链表 {
     public static void main(String[] args) {
-        ListNode headA = new ListNode(1);
+        int[] nums = {1,2,3,4,5};
+        CreateNode cn = new CreateNode();
+        ListNode headA =cn.createListNode(nums);
         ListNode headB = new ListNode(2);
         ListNode li = getIntersectionNode(headA,headB);
     }
