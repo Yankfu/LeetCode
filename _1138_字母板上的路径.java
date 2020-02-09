@@ -8,7 +8,7 @@ public class _1138_字母板上的路径 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		_test te=new _test();
+		_0000_test te=new _0000_test();
 		String target="ez";
 		System.out.println("���ƻ��Ǵ�������  "+alphabetBoardPath(target));
 	}

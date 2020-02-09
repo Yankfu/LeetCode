@@ -20,7 +20,7 @@ class CreateTree{
 		}
 		return helpPreIn(preorder,0,preorder.length-1,inorder,0,inorder.length-1);
 	}
-	public TreeNode helpPreIn(int[] preorder,int pStart,int pEnd,int[] inorder,int iStart,int iEnd){
+	private TreeNode helpPreIn(int[] preorder,int pStart,int pEnd,int[] inorder,int iStart,int iEnd){
 		if(pStart>pEnd || iStart>iEnd){
 			return null;
 		}
