@@ -7,7 +7,7 @@ public class _0039_组合总和 {
     public static void main(String[] args) {
         int[] candidates = {2, 3, 6, 7};
         List<List<Integer>> li = combinationSum(candidates, 7);
-        System.out.println(li);
+        System.out.print(li);
     }
 
     static List<List<Integer>> res = new ArrayList();
