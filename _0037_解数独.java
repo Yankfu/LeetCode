@@ -3,19 +3,19 @@ package com.LeetCode;
 public class _0037_解数独 {
 
 
-//    static char[][] res = new char[9][9];
+    //    static char[][] res = new char[9][9];
     public static void main(String[] args) {
-    char[][] board = {
-            {'.','.','9','7','4','8','.','.','.'},
-        {'7','.','.','.','.','.','.','.','.'},
-        {'.','2','.','1','.','9','.','.','.'},
-        {'.','.','7','.','.','.','2','4','.'},
-        {'.','6','4','.','1','.','5','9','.'},
-        {'.','9','8','.','.','.','3','.','.'},
-        {'.','.','.','8','.','3','.','2','.'},
-        {'.','.','.','.','.','.','.','.','6'},
-        {'.','.','.','2','7','5','9','.','.'}
-    };
+        char[][] board = {
+                {'.', '.', '9', '7', '4', '8', '.', '.', '.'},
+                {'7', '.', '.', '.', '.', '.', '.', '.', '.'},
+                {'.', '2', '.', '1', '.', '9', '.', '.', '.'},
+                {'.', '.', '7', '.', '.', '.', '2', '4', '.'},
+                {'.', '6', '4', '.', '1', '.', '5', '9', '.'},
+                {'.', '9', '8', '.', '.', '.', '3', '.', '.'},
+                {'.', '.', '.', '8', '.', '3', '.', '2', '.'},
+                {'.', '.', '.', '.', '.', '.', '.', '.', '6'},
+                {'.', '.', '.', '2', '7', '5', '9', '.', '.'}
+        };
         solveSudoku(board);
         System.out.println("这是运行完的结果------------------------------");
         for (int i = 0; i < board.length; i++) {
@@ -31,18 +31,20 @@ public class _0037_解数独 {
             }
         }
     }
+
     static boolean flag = false;
     static char[][] res = new char[9][9];
+
     public static void solveSudoku(char[][] board) {
-        backTrack(board,0, 0);
-        for(int k = 0;k<res.length;k++){
-            for(int l = 0;l<res.length;l++){
+        backTrack(board, 0, 0);
+        for (int k = 0; k < res.length; k++) {
+            for (int l = 0; l < res.length; l++) {
                 board[k][l] = res[k][l];
             }
         }
     }
 
-    public static void backTrack(char[][] board,int i, int j) {
+    public static void backTrack(char[][] board, int i, int j) {
 //        System.out.println(i+" "+j+"---------------------------");
 //        for (int k = 0; k < board.length; k++) {
 //            for (int l = 0; l < board[0].length; l++) {
@@ -59,29 +61,29 @@ public class _0037_解数独 {
 
         if (i == board.length && j == 0 && !flag) {
             flag = true;
-            for(int k = 0;k<res.length;k++){
-                for(int l = 0;l<res.length;l++){
+            for (int k = 0; k < res.length; k++) {
+                for (int l = 0; l < res.length; l++) {
                     res[k][l] = board[k][l];
                 }
             }
-        } else if (board[i][j] != '.'&& !flag) {
+        } else if (board[i][j] != '.' && !flag) {
             if (j == 8) {
-                backTrack(board,i + 1, 0);
+                backTrack(board, i + 1, 0);
             } else {
-                backTrack(board,i, j + 1);
+                backTrack(board, i, j + 1);
             }
-        } else if (board[i][j] == '.' && !flag ){
+        } else if (board[i][j] == '.' && !flag) {
             for (int count = 1; count < 10; count++) {
                 //System.out.println(legal(board, i, j)+" "+count);
                 board[i][j] = (char) (count + 48);
                 if (legal(board, i, j) && !flag) {
                     if (j == 8) {
-                        backTrack(board,i + 1, 0);
+                        backTrack(board, i + 1, 0);
                     } else {
-                        backTrack(board,i, j + 1);
+                        backTrack(board, i, j + 1);
                     }
                     board[i][j] = '.';
-                }else{
+                } else {
                     board[i][j] = '.';
                 }
             }
@@ -97,10 +99,10 @@ public class _0037_解数独 {
     public static boolean legal(char[][] board, int i, int j) {
         //行不冲突
         for (int k = 0; k < board.length; k++) {
-            if(k==j){
+            if (k == j) {
 
-            }else{
-                if(board[i][k] == board[i][j]){
+            } else {
+                if (board[i][k] == board[i][j]) {
                     return false;
                 }
             }
@@ -108,10 +110,10 @@ public class _0037_解数独 {
         // System.out.println("     行没问题  ");
         //列不冲突
         for (int k = 0; k < board.length; k++) {
-            if(k==i){
+            if (k == i) {
 
-            }else{
-                if(board[k][j] == board[i][j]){
+            } else {
+                if (board[k][j] == board[i][j]) {
                     return false;
                 }
             }
@@ -120,11 +122,11 @@ public class _0037_解数独 {
         //单元格内不冲突
         for (int k = (i / 3) * 3; k < ((i / 3) * 3) + 3; k++) {
             for (int l = (j / 3) * 3; l < ((j / 3) * 3) + 3; l++) {
-                if(k==i && l == j){
+                if (k == i && l == j) {
 
-                }else{
+                } else {
                     //System.out.println(k+" "+l);
-                    if(board[k][l] == board[i][j]){
+                    if (board[k][l] == board[i][j]) {
                         return false;
                     }
                 }
