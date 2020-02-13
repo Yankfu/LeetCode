@@ -1,13 +1,14 @@
 package com.LeetCode;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class _0056_合并区间 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[][] intervals = {};
+		int[][] intervals = {{1,3},{8,10},{2,6},{15,18}};
 		int[][] res = merge(intervals);
 		for(int[] a:res) {
 			System.out.println(a[0]+" "+a[1]);
@@ -15,6 +16,7 @@ public class _0056_合并区间 {
 	}
 	public static int[][] merge(int[][] intervals) {
 		int[][] res = intervals.clone();
+		Arrays.sort(res);
 		return res;
     }
 //	public static int[][] merge(int[][] intervals) {

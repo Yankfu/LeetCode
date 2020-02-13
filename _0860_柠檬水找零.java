@@ -1,6 +1,6 @@
 package com.LeetCode;
 
-public class _860_柠檬水找零 {
+public class _0860_柠檬水找零 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

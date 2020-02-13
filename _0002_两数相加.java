@@ -9,7 +9,6 @@ public class _0002_两数相加 {
 		ListNode ls13 = new ListNode(1);
 		ls11.next = ls12;
 		ls12.next = ls13;
-
 		ListNode ls21 = new ListNode(9);
 		ListNode ls22 = new ListNode(9);
 		ListNode ls23 = new ListNode(9);
