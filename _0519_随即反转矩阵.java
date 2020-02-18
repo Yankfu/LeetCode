@@ -29,29 +29,7 @@ class Solution519 {
     }
     
     public int[] flip() {
-        int[] res=new int[2];
-        while(true) {
-        	int a = r.nextInt(num);
-            if(a<row) {
-            	res[0]=0;
-            	res[1]=a;
-            	if(juZhen[res[0]][res[1]]==1) {
-            		continue;
-            	}else {
-            		juZhen[res[0]][res[1]]=1;
-            		break;
-            	}
-            }else {
-            	res[0]=a/row;
-            	res[1]=a%row;
-            	if(juZhen[res[0]][res[1]]==1) {
-            		continue;
-            	}else {
-            		juZhen[res[0]][res[1]]=1;
-            		break;
-            	}
-            }
-        }
+        int[] res = {};
         return res;
     }
     
