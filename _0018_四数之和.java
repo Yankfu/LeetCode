@@ -10,28 +10,62 @@ public class _0018_四数之和 {
             System.out.println(lis);
         }
     }
-    static List<List<Integer>> res = new ArrayList<>();
-
     public static List<List<Integer>> fourSum(int[] nums, int target) {
-        Arrays.sort(nums);
-        backTrack(nums, 0, 0, target, new ArrayList<>(), 0);
-        Set set = new HashSet();
-        set.addAll(res);
-        List<List<Integer>> resNew = new ArrayList<>();
-        resNew.addAll(set);
-        return resNew;
-    }
-
-    public static void backTrack(int[] nums, int now, int nowVal, int target, List<Integer> list, int point) {
-        if (now == 4 && nowVal == target) {
-            res.add(new ArrayList<>(list));
+        List<List<Integer>> res = new ArrayList<>();
+        if(nums==null || nums.length<4){
+            return res;
         }
-        for (int i = point; i < nums.length; i++) {
-            if(nums.length-i+now>=4){
-                list.add(nums[i]);
-                backTrack(nums, now + 1, nowVal + nums[i], target, list, i+1);
-                list.remove(list.size() - 1);
+        Arrays.sort(nums);
+        int first;
+        int second;
+        int third;
+        int four;
+        for (first = 0; first < nums.length-3; first++) {
+            if(first>0 && nums[first] == nums[first-1]){
+                continue;
+            }
+            int min = nums[first]+nums[first+1]+nums[first+2]+nums[first+3];
+            if(min>target){
+                break;
+            }
+            int max1=nums[first]+nums[nums.length-1]+nums[nums.length-2]+nums[nums.length-3];
+            if(max1<target){
+                continue;
+            }
+            for (second = first+1; second < nums.length-2; second++) {
+                if(second>first+1 && nums[second] == nums[second-1]){
+                    continue;
+                }
+                third = second + 1;
+                four = nums.length-1;
+                int min2 = nums[first] + nums[second] + nums[third] + nums[third+1];
+                if(min>target){
+                    continue;//是不是可以改成break
+                }
+                int max2 = nums[first] + nums[second] + nums[four] + nums[four-1];
+                if(max2<target){
+                    continue;
+                }
+                while(third<four){
+                    int curr = nums[first] + nums[second] + nums[third] + nums[four];
+                    if(curr == target){
+                        res.add(Arrays.asList(nums[first],nums[second],nums[third],nums[four]));
+                        third++;
+                        while(third<four && nums[third] == nums[third-1]){
+                            third++;
+                        }
+                        four--;
+                        while(third<four && second<four && nums[four] == nums[four+1]){
+                            four--;
+                        }
+                    }else if(curr>target){
+                        four--;
+                    }else {
+                        third++;
+                    }
+                }
             }
         }
+        return res;
     }
 }
