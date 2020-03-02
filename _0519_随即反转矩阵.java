@@ -1,6 +1,9 @@
 package com.LeetCode;
 
+import java.util.HashSet;
+import java.util.Map;
 import java.util.Random;
+import java.util.Set;
 
 public class _0519_随即反转矩阵 {
 
@@ -16,24 +19,36 @@ public class _0519_随即反转矩阵 {
  * 清空的时候实际清空的是一维数组
  */
 class Solution519 {
-	private int[][] juZhen;
     Random r = new Random();
-    private int num;
-    private int row;
-    private int col;
+    Set<Integer> set = new HashSet<>();
+    int row;
+    int col;
+    int total;
+    int count = 0;
 	public Solution519(int n_rows, int n_cols) {
-        this.row = n_rows;
-        this.col = n_cols;
-		juZhen = new int[n_rows][n_cols];
-        num = n_rows*n_cols;
+        row = n_rows;
+        col = n_cols;
+        total = row*col;
     }
-    
+
     public int[] flip() {
-        int[] res = {};
+		if(count == total){
+
+		}
+        int[] res = new int[2];
+        int target = r.nextInt(total+1);
+
+        while(set.contains(target)){
+        	target = r.nextInt(total+1);
+		}
+
+        res[0] = target/col;
+        res[1] = target%col;
+        count++;
         return res;
     }
     
     public void reset() {
-        
+        set.clear();
     }
 }
