@@ -41,7 +41,7 @@ public class _0953_验证外星语词典 {
 		}
 
 		for (int i = 1; i < res.length; i++) {
-			if (!help(res[i],res[i-1],map)){
+			if (!help(res[i],res[i-1])){
 				return false;
 			}
 		}
@@ -49,12 +49,12 @@ public class _0953_验证外星语词典 {
 		return true;
 	}
 
-	public static boolean help(int[] a,int[] b,Map map){
-		int len = a.length>b.length?b.length:a.length;
+	public static boolean help(int[] a, int[] b){
+		int len = Math.min(a.length, b.length);
 		for (int i = 0; i < len; i++) {
 			//找第一个不同的
 			if (a[i] == b[i]){
-				continue;
+
 			}else {
 				if (a[i]<b[i]) {
 					return false;
