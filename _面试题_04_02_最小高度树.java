@@ -6,7 +6,7 @@ package com.LeetCode;
  * @Date 2020/3/11 下午10:57
  * @Version 1.0
  */
-public class _面试题_04_02_i最小高度树e {
+public class _面试题_04_02_最小高度树 {
 	public static void man(String[] args) {
 		int[] nums = {-10,-3,0,5,9};
 	}
