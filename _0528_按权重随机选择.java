@@ -13,34 +13,34 @@ public class _0528_按权重随机选择 {
 		int[] w = {1,3};
 		Solution528 so = new Solution528(w);
 	}
-}
-class Solution528 {
-	int[] w;
-	public Solution528(int[] w) {
-		int sum = 0;
-		this.w = new int[w.length];
-		for (int i = 0; i < w.length; i++) {
-			sum = sum + w[i];
-			this.w[i] = sum;
-		}
-	}
-
-	public int pickIndex() {
-		Random ran = new Random();
-		int target = ran.nextInt(w[w.length-1])+1;
-		int left = 0;
-		int right = w.length-1;
-		int mid;
-		while(left<right){
-			mid = left+((right-left)>>1);
-			if(w[mid] == target){
-				return mid;
-			}else if(w[mid] < target){
-				left = mid+1;
-			}else{
-				right = mid;
+	static class Solution528 {
+		int[] w;
+		public Solution528(int[] w) {
+			int sum = 0;
+			this.w = new int[w.length];
+			for (int i = 0; i < w.length; i++) {
+				sum = sum + w[i];
+				this.w[i] = sum;
 			}
 		}
-		return left;
+
+		public int pickIndex() {
+			Random ran = new Random();
+			int target = ran.nextInt(w[w.length-1])+1;
+			int left = 0;
+			int right = w.length-1;
+			int mid;
+			while(left<right){
+				mid = left+((right-left)>>1);
+				if(w[mid] == target){
+					return mid;
+				}else if(w[mid] < target){
+					left = mid+1;
+				}else{
+					right = mid;
+				}
+			}
+			return left;
+		}
 	}
 }

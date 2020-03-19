@@ -1,6 +1,7 @@
 package com.LeetCode;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -31,6 +32,7 @@ public class _1313_解压缩编码列表 {
 //		}
 //		return res;
 //	}
+	//可以试下Arrays.fill();
 	public static int[] decompressRLElist(int[] nums) {
 		int count = 0;
 		for (int i = 0; i < nums.length; i = i + 2) {

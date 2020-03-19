@@ -17,22 +17,23 @@ public class _1352_最后K个数的乘积 {
         po.add(8);
         System.out.println(po.getProduct(2));
     }
-}
-class ProductOfNumbers {
+    static class ProductOfNumbers {
 
-    public ProductOfNumbers() {
+        public ProductOfNumbers() {
 
-    }
-    List<Integer> li = new ArrayList<>();
-    public void add(int num) {
-        li.add(num);
-    }
-
-    public int getProduct(int k) {
-        int res = 1;
-        for(int i = li.size()-1;i>(li.size()-k-1);i--){
-            res = res * li.get(i);
         }
-        return res;
+        List<Integer> li = new ArrayList<>();
+        public void add(int num) {
+            li.add(num);
+        }
+
+        public int getProduct(int k) {
+            int res = 1;
+            for(int i = li.size()-1;i>(li.size()-k-1);i--){
+                res = res * li.get(i);
+            }
+            return res;
+        }
     }
 }
+

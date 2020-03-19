@@ -25,45 +25,44 @@ public class _面试题59_II队列的最大值 {
 		maxQueue.push_back(22);
 		System.out.println(maxQueue.pop_front());
 	}
-
-}
-class MaxQueue {
-	List<Integer> li;
-	List<Integer> big;
-	public MaxQueue() {
-		li = new ArrayList<>();
-		big = new ArrayList<>();
-	}
-
-	public int max_value() {
-		if(big.size()>0){
-			return big.get(0);
+	static class MaxQueue {
+		List<Integer> li;
+		List<Integer> big;
+		public MaxQueue() {
+			li = new ArrayList<>();
+			big = new ArrayList<>();
 		}
-		return -1;
-	}
 
-	public void push_back(int value) {
-		li.add(value);
-		if (big.size() == 0){
-			big.add(value);
-		}else{
-			for (int i = 0; i < big.size(); i++) {
-				if (big.get(i)<value){
-					big.add(i,value);
-					return;
-				}
+		public int max_value() {
+			if(big.size()>0){
+				return big.get(0);
 			}
-			big.add(value);
-		}
-	}
-
-	public int pop_front() {
-		if (big.size() == 0){
 			return -1;
 		}
-		int res = li.get(0);
-		li.remove(0);
-		big.remove(big.indexOf(res));
-		return res;
+
+		public void push_back(int value) {
+			li.add(value);
+			if (big.size() == 0){
+				big.add(value);
+			}else{
+				for (int i = 0; i < big.size(); i++) {
+					if (big.get(i)<value){
+						big.add(i,value);
+						return;
+					}
+				}
+				big.add(value);
+			}
+		}
+
+		public int pop_front() {
+			if (big.size() == 0){
+				return -1;
+			}
+			int res = li.get(0);
+			li.remove(0);
+			big.remove(big.indexOf(res));
+			return res;
+		}
 	}
 }

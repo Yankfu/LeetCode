@@ -68,7 +68,7 @@ public class _0306_累加数 {
         return count;
     }
 }
-
+/**
 class Solution_306 {
     public boolean isAdditiveNumber(String num) {
         return backtrack(num,0,0,0,0);//第一个0：从num的0号位置开始计算
@@ -100,3 +100,4 @@ class Solution_306 {
         return sum==s?s:-1;//后面就需判断二者和是否为sum（之前两个数二者的和）
     }
 }
+ */

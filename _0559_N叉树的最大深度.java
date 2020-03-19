@@ -9,16 +9,15 @@ public class _0559_N叉树的最大深度{
 		// TODO Auto-generated method stub
 
 	}
+	class Node {
+		public int val;
+		public List<Node> children;
 
-}
-class Node {
-    public int val;
-    public List<Node> children;
+		public Node() {}
 
-    public Node() {}
-
-    public Node(int _val,List<Node> _children) {
-        val = _val;
-        children = _children;
-    }
+		public Node(int _val,List<Node> _children) {
+			val = _val;
+			children = _children;
+		}
+	}
 }

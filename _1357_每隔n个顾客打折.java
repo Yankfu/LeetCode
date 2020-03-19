@@ -26,38 +26,40 @@ public class _1357_每隔n个顾客打折 {
 //		cashier.getBill({7,5,3,1,6,4,2},{10,10,10,9,9,9,7}); // 返回 7350.0 ，账单原本为 14700.0 ，但由于系统计数再次达到三，该顾客将得到 50% 的折扣，实际金额为 7350.0 。
 //		cashier.getBill({2,3,5},{5,3,2});                    // 返回 2500.0
 	}
-}
-class Cashier {
-	int count = 0;
-	int n = 0;
-	int discount;
-	int[] products;
-	int[] prices;
-	Map<Integer,Integer> map = new HashMap<>();
-	public Cashier(int n, int discount, int[] products, int[] prices) {
-		this.n = n;
-		this.discount = discount;
-		this.products = products;
-		this.prices = prices;
-		for (int i = 0; i < prices.length; i++) {
-			map.put(products[i],prices[i]);
+
+	static class Cashier {
+		int count = 0;
+		int n = 0;
+		int discount;
+		int[] products;
+		int[] prices;
+		Map<Integer,Integer> map = new HashMap<>();
+		public Cashier(int n, int discount, int[] products, int[] prices) {
+			this.n = n;
+			this.discount = discount;
+			this.products = products;
+			this.prices = prices;
+			for (int i = 0; i < prices.length; i++) {
+				map.put(products[i],prices[i]);
+			}
+		}
+
+		public double getBill(int[] product, int[] amount) {
+			count++;
+			int pres = 0;
+			if(count == n){
+				for (int i = 0; i < product.length; i++) {
+					pres += map.get(product[i])*amount[i];
+				}
+				count = 0;
+				return (pres-pres*((double)discount/100.0));
+			}else{
+				for (int i = 0; i < product.length; i++) {
+					pres += map.get(product[i])*amount[i];
+				}
+				return pres;
+			}
 		}
 	}
 
-	public double getBill(int[] product, int[] amount) {
-		count++;
-		int pres = 0;
-		if(count == n){
-			for (int i = 0; i < product.length; i++) {
-				pres += map.get(product[i])*amount[i];
-			}
-			count = 0;
-			return (pres-pres*((double)discount/100.0));
-		}else{
-			for (int i = 0; i < product.length; i++) {
-				pres += map.get(product[i])*amount[i];
-			}
-			return pres;
-		}
-	}
 }

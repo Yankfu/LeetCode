@@ -21,7 +21,7 @@ public class _0322_零钱兑换 {
 		if (amount == 0) {
 			return 0;
 		}
-		
+
 		int[] res = new int[amount + 1];
 		for (int i = 1; i <= amount; i++) { // i代表着当前的总价应该是多少
 			int cost = Integer.MAX_VALUE;
@@ -35,31 +35,33 @@ public class _0322_零钱兑换 {
 			}
 			res[i] = cost;
 		}
-		if(res[amount]==Integer.MAX_VALUE) {
+		if (res[amount] == Integer.MAX_VALUE) {
 			return -1;
 		}
 		return res[amount];
 	}
 }
-
+/**
 class DaLaoSolution {
-	   private int res = Integer.MAX_VALUE;
-	    public int coinChange(int[] coins, int amount) {
-	        Arrays.sort(coins);
-	        helper(coins, coins.length-1, 0, amount);
-	        return res == Integer.MAX_VALUE ? -1 : res;
-	    }
+	private int res = Integer.MAX_VALUE;
 
-	    private void helper(int[] coins, int start, int cur, int amount) {
-	        if (start < 0) return;
-	        if (amount % coins[start] == 0) {
-	            res = Math.min(res, cur + amount / coins[start]);
-	            return;
-	        }
-	        for (int i = amount / coins[start]; i >= 0; i--) {
-	            // System.out.println("cur = " + cur + ", i = " + i + ", res = " + res);
-	            if (cur + i >= res-1) break;
-	            helper(coins, start-1, cur+i, amount-i*coins[start]);
-	        }
-	    }
+	public int coinChange(int[] coins, int amount) {
+		Arrays.sort(coins);
+		helper(coins, coins.length - 1, 0, amount);
+		return res == Integer.MAX_VALUE ? -1 : res;
 	}
+
+	private void helper(int[] coins, int start, int cur, int amount) {
+		if (start < 0) return;
+		if (amount % coins[start] == 0) {
+			res = Math.min(res, cur + amount / coins[start]);
+			return;
+		}
+		for (int i = amount / coins[start]; i >= 0; i--) {
+			// System.out.println("cur = " + cur + ", i = " + i + ", res = " + res);
+			if (cur + i >= res - 1) break;
+			helper(coins, start - 1, cur + i, amount - i * coins[start]);
+		}
+	}
+}
+ */
