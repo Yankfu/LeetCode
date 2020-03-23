@@ -10,7 +10,7 @@ public class _0876_链表的中间结点 {
         ListNode fast,slow;
         fast=head;
         slow=head;
-        while(fast.next != null && slow != null) {
+        while(fast != null && fast.next != null) {
         	slow = slow.next;
         	fast = fast.next.next;
         }
