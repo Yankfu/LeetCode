@@ -4,6 +4,20 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/*
+给出一个区间的集合，请合并所有重叠的区间。
+
+示例 1:
+
+输入: [[1,3],[2,6],[8,10],[15,18]]
+输出: [[1,6],[8,10],[15,18]]
+解释: 区间 [1,3] 和 [2,6] 重叠, 将它们合并为 [1,6].
+示例 2:
+
+输入: [[1,4],[4,5]]
+输出: [[1,5]]
+解释: 区间 [1,4] 和 [4,5] 可被视为重叠区间。
+ */
 public class _0056_合并区间 {
 
 	public static void main(String[] args) {
@@ -15,57 +29,20 @@ public class _0056_合并区间 {
 		}
 	}
 	public static int[][] merge(int[][] intervals) {
-		int[][] res = intervals.clone();
-		Arrays.sort(res);
-		return res;
+		if (intervals.length == 0){
+			return intervals;
+		}
+		List<int[]> list = new ArrayList();
+		Arrays.sort(intervals,(a,b)->a[0]-b[0]);
+		for (int i = 0; i < intervals.length-1; i++) {
+			if (intervals[i][1] >= intervals[i+1][0]){
+				intervals[i+1][0] = intervals[i][0];
+				intervals[i+1][1] = Math.max(intervals[i][1],intervals[i+1][1]);
+			}else {
+				list.add(intervals[i]);
+			}
+		}
+		list.add(intervals[intervals.length-1]);
+		return list.toArray(new int[list.size()][2]);
     }
-//	public static int[][] merge(int[][] intervals) {
-//		if(intervals.length==0) {
-//			int[][] res= {};
-//			return res;
-//		}
-//		//确定一维数组大小
-//		int big=Integer.MIN_VALUE;
-//		for(int i=0;i<intervals.length;i++) {
-//			if(big<intervals[i][1]) {
-//				big=intervals[i][1];
-//			}
-//		}
-//		//生成一维数组
-////		System.out.println("big: "+big);
-//		int[] temp = new int[big+1];
-//		//给一维数组赋值
-//		for(int i=0;i<intervals.length;i++) {
-//			for(int j=intervals[i][0];j<=intervals[i][1];j++) {
-//				temp[j]=1;
-//			}
-//		}
-//		List<Integer> li = new ArrayList<Integer>();
-//		int first=0;
-//		int last=0;
-////		for(int a:temp) {
-////			System.out.print(a+" ");
-////		}
-////		System.out.println();
-//		for(int i=0;i<temp.length;i++) {
-//			if(temp[i]==1) {
-//				first=i;
-//				last=first;
-//				while(last<temp.length && temp[last]!=0) {
-//					last++;
-//				}
-//				last--;
-//				li.add(first);
-//				li.add(last);
-//				i=last;
-//			}
-//		}
-//		int[][] res = new int[(li.size()+1)/2][2];
-//		first=0;
-//		for(int i=0;i<res.length;i++) {
-//			res[i][0]=li.get(first++);
-//			res[i][1]=li.get(first++);
-//		}
-//		return res;
-//    }
 }
