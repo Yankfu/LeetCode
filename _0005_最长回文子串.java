@@ -1,10 +1,14 @@
 package com.LeetCode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class _0005_最长回文子串 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(longestPalindrome(""));
+		String s = "babad";
+		System.out.println(new _0005_最长回文子串().longestPalindrome2(s));
 	}
 
 	public static String longestPalindrome(String s) {
@@ -67,5 +71,63 @@ public class _0005_最长回文子串 {
 		}
 		return temp;
 	}
-	
+
+	public String longestPalindrome2(String s) {
+		List<Character> list = new ArrayList<>();
+		list.add('#');
+		char[] ch = s.toCharArray();
+		for (int i = 0; i < ch.length; i++) {
+			list.add(ch[i]);
+			list.add('#');
+		}
+
+		int[] count = new int[list.size()];
+		char[] mar = new char[list.size()];
+
+		for (int i = 0; i < mar.length; i++) {
+			mar[i] = list.get(i);
+		}
+		int max = 0;
+		int maxIndex = 0;
+		for (int i = 0; i < count.length; i++) {
+			//定义左右边界
+			int left = i-1;
+			int right = i+1;
+			//初始半径为1；
+			count[i] = 1;
+			//开始循环
+			while (left>=0 && right < count.length){
+				if (mar[left--] == mar[right++]){
+					count[i]++;
+				}else {
+					break;
+				}
+			}
+			if (count[i]>max){
+				maxIndex = i;
+				max = count[i];
+			}
+		}
+
+
+//		for (int i = 0; i < mar.length; i++) {
+//			System.out.print(mar[i]+" ");
+//		}
+//		System.out.println();
+//		for (int i = 0; i < mar.length; i++) {
+//			System.out.print(count[i]+" ");
+//		}
+//
+//		System.out.println();
+		StringBuilder sb = new StringBuilder();
+		for (int i = maxIndex - max + 1; i < maxIndex + max - 1; i++) {
+			if (mar[i]=='#'){
+				continue;
+			}else {
+				sb.append(mar[i]);
+			}
+		}
+
+		return sb.toString();
+	}
 }
