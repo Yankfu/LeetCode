@@ -1,6 +1,6 @@
 package com.LeetCode;
 
-public class _面试题62_圆圈中最后剩下的数字 {
+public class _面试题_62_圆圈中最后剩下的数字 {
     public static void main(String[] args) {
 
     }

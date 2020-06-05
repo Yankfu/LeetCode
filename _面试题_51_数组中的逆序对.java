@@ -6,7 +6,7 @@ package com.LeetCode;
  * @USER: Yankfu
  * @DATE: 2020/4/24 22:11
  */
-public class _面试题51_数组中的逆序对 {
+public class _面试题_51_数组中的逆序对 {
     public static void main(String[] args) {
 
     }

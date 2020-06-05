@@ -21,7 +21,7 @@ package com.LeetCode;
  * @USER: Yankfu
  * @DATE: 2020/4/8 9:13
  */
-public class _面试题13_机器人的运动范围 {
+public class _面试题_13_机器人的运动范围 {
     public static void main(String[] args) {
         System.out.println(movingCount(3,1,0));
     }
@@ -42,7 +42,9 @@ public class _面试题13_机器人的运动范围 {
         return res;
     }
     public static int help(boolean[][] visited,int x,int y,int k){
-        if(x < 0 || x > visited.length-1 || y < 0 || y > visited[0].length-1 || k < count(x,y) || visited[x][y]) return 0;
+        if(x < 0 || x > visited.length-1 || y < 0 || y > visited[0].length-1 || k < count(x,y) || visited[x][y]) {
+            return 0;
+        }
         visited[x][y] = true;
         return 1+help(visited,x+1,y,k)+help(visited,x,y+1,k);
     }

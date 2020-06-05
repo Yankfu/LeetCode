@@ -9,7 +9,7 @@ import java.util.List;
  * @Date 2020/3/6 上午9:50
  * @Version 1.0
  */
-public class _面试题57_II和为s的连续正数序列 {
+public class _面试题_57_II和为s的连续正数序列 {
 	public static void main(String[] args) {
 		int[][] res = findContinuousSequence(9);
 		for (int i = 0; i < res.length; i++) {

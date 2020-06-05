@@ -6,7 +6,7 @@ package com.LeetCode;
  * @Date 2020/3/11 上午11:31
  * @Version 1.0
  */
-public class _面试题55_II平衡二叉树 {
+public class _面试题_55_II_平衡二叉树 {
 	public static void main(String[] args) {
 
 	}

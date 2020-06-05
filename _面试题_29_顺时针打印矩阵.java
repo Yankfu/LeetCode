@@ -14,32 +14,48 @@ public class _面试题_29_顺时针打印矩阵 {
         if(matrix.length == 0) {
             return new int[0];
         }
-        int l = 0, r = matrix[0].length - 1, t = 0, b = matrix.length - 1, x = 0;
-        int[] res = new int[(r + 1) * (b + 1)];
-        while(true) {
-            for(int i = l; i <= r; i++) {
-                res[x++] = matrix[t][i]; // left to right.
-            }
-            if(++t > b) {
-                break;
-            }
-            for(int i = t; i <= b; i++) {
-                res[x++] = matrix[i][r]; // top to bottom.
-            }
-            if(l > --r) {
-                break;
-            }
-            for(int i = r; i >= l; i--) {
-                res[x++] = matrix[b][i]; // right to left.
-            }
-            if(t > --b) {
-                break;
-            }
-            for(int i = b; i >= t; i--) {
-                res[x++] = matrix[i][l]; // bottom to top.
-            }
-            if(++l > r) {
-                break;
+        int[] res = new int[matrix.length*matrix[0].length];
+        int x = 0;
+        int y = 0;
+        //0→  1↓  2←  3↑
+        int flag = 0;
+        for (int i = 0; i < res.length; i++) {
+            if (flag == 0){
+                while (x < matrix[0].length && matrix[x+1][y]!=-1){
+                    res[i++] = matrix[x][y];
+                    matrix[x++][y] = -1;
+                }
+                flag++;
+                i--;
+                x--;
+                y++;
+            }else if (flag == 1){
+                while (y < matrix.length && matrix[x][y+1]!=-1){
+                    res[i++] = matrix[x][y];
+                    matrix[x][y++] = -1;
+                }
+                flag++;
+                i--;
+                y--;
+                x--;
+            }else if (flag == 2){
+                while (x > 0 && matrix[x-1][y]!=-1){
+                    res[i++] = matrix[x][y];
+                    matrix[x--][y] = -1;
+                }
+                flag++;
+                i--;
+                x++;
+                y--;
+            }else if (flag == 3){
+                while (y > 0 && matrix[x][y-1]!=-1){
+                    res[i++] = matrix[x][y];
+                    matrix[x][y--] = -1;
+                }
+                flag = 0;
+                i--;
+                y++;
+                x++;
             }
         }
         return res;

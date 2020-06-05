@@ -6,7 +6,7 @@ package com.LeetCode;
  * @Date 2020/3/17 下午11:21
  * @Version 1.0
  */
-public class _面试题53_II_0n1中缺失的数字 {
+public class _面试题_53_II_0n1中缺失的数字 {
 	public static void main(String[] args) {
 
 	}

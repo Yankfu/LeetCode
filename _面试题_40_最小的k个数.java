@@ -6,7 +6,7 @@ package com.LeetCode;
  * @Date 2020/3/20 下午10:03
  * @Version 1.0
  */
-public class _面试题40_最小的k个数 {
+public class _面试题_40_最小的k个数 {
 	public static void main(String[] args) {
 
 	}

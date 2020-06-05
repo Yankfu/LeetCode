@@ -6,7 +6,7 @@ package com.LeetCode;
  * @Date 2020/3/21 下午11:13
  * @Version 1.0
  */
-public class _面试题25_合并两个排序的链表 {
+public class _面试题_25_合并两个排序的链表 {
 	public static void main(String[] args) {
 
 	}

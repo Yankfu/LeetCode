@@ -9,7 +9,7 @@ import java.util.Map;
  * @USER: Yankfu
  * @DATE: 2020/4/28 21:35
  */
-public class _面试题56_II_数组中数字出现的次数II {
+public class _面试题_56_II_数组中数字出现的次数II {
     public static void main(String[] args) {
 
     }

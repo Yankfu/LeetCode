@@ -6,10 +6,10 @@ package com.LeetCode;
  * @USER: Yankfu
  * @DATE: 2020/4/28 17:48
  */
-public class _面试题56_I_数组中数字出现的次数 {
+public class _面试题_56_I_数组中数字出现的次数 {
     public static void main(String[] args) {
         int[] nums = {1,1,2,3};
-        int[] res = new _面试题56_I_数组中数字出现的次数().singleNumbers(nums);
+        int[] res = new _面试题_56_I_数组中数字出现的次数().singleNumbers(nums);
         System.out.println(res[0]+" "+res[1]);
     }
     public int[] singleNumbers(int[] nums) {

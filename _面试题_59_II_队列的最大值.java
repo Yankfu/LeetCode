@@ -11,7 +11,7 @@ import java.util.Queue;
  * @Date 2020/3/7 上午11:42
  * @Version 1.0
  */
-public class _面试题59_II队列的最大值 {
+public class _面试题_59_II_队列的最大值 {
 
 	public static void main(String[] args) {
 		MaxQueue maxQueue = new MaxQueue();
