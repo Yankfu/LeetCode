@@ -8,7 +8,7 @@ import java.util.HashMap;
  * @USER: Yankfu
  * @DATE: 2020/5/22 8:38
  */
-public class _106_从中序与后序遍历序列构造二叉树 {
+public class _0106_从中序与后序遍历序列构造二叉树 {
     int[] inorder;
     int[] postorder;
     int index;
