@@ -4,16 +4,12 @@ public class _0003_无重复字符的最长子串 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		long startTime=System.currentTimeMillis();
+		long startTime = System.currentTimeMillis();
 		System.out.println(lengthOfLongestSubstring("abcdefgh"));
 		//System.out.println(lengthOfLongestSubstring("abcabcbb"));
-		long endTime=System.currentTimeMillis();
-		System.out.println("��������ʱ�䣺 "+(endTime-startTime)+"ms");
-	}	
-/*
- * �ȼ��������1����Ϊ�������ͬ�Ļ�1�������
- * Ȼ��result����1�������ַ�������������ص���false������Ϊ�����result-1
- */
+		long endTime = System.currentTimeMillis();
+		System.out.println("��������ʱ�䣺 " + (endTime - startTime) + "ms");
+	}
 	public static int lengthOfLongestSubstring(String s) {
 		int result=1;
 		int start=0;
