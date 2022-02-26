@@ -1,4 +1,4 @@
-package No1700To1710;
+package no1700To1710;
 
 /**
  * @PROJECT_NAME: LeetCode

@@ -1,4 +1,4 @@
-package No530To540;
+package no530To540;
 
 /**
  * @PROJECT_NAME: LeetCode
@@ -13,7 +13,6 @@ public class ComplexNumberMultiplication_537 {
         String[] complex1 = num1.split("\\+|i");
         String[] complex2 = num2.split("\\+|i");
         int real1 = Integer.parseInt(complex1[0]);
-        int real21 = Integer.valueOf(complex1[0]);
         int imag1 = Integer.parseInt(complex1[1]);
         int real2 = Integer.parseInt(complex2[0]);
         int imag2 = Integer.parseInt(complex2[1]);
