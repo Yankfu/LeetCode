@@ -1,6 +1,11 @@
 package no550To560;
 
 public class OptimalDivision_553 {
+
+    public static void main(String[] args) {
+        System.out.println("add ssh to local");
+    }
+
     public String optimalDivision(int[] nums) {
         int n = nums.length;
         if (n == 1) {
